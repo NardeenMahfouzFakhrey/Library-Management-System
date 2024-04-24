@@ -4,8 +4,8 @@ This Library Management System is designed to manage library operations related 
 
 ### Getting Started
 #### Prerequisites
- PostgreSQL 
- An IDE such as IntelliJ IDEA or Eclipse
+ - PostgreSQL 
+ - An IDE such as IntelliJ IDEA or Eclipse
 
 ### Configuration
 Before running the application, you need to configure the PostgreSQL database settings and JWT settings in the application.properties file.
