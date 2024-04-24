@@ -36,12 +36,14 @@ The application will start running at http://localhost:8080.
        ```
 - PUT /api/books/{id} - Update an existing book's information.
     - Required JSON Payload for updated info:
+      ```json
         {
          "title": "Book Title",
          "author": "Author Name",
          "publicationYear": 2021,
          "isbn": "ISBN-122"
         }
+      ```
 - DELETE /api/books/{id} - Remove a book from the library.
 
 #### Patron Management
@@ -49,37 +51,42 @@ The application will start running at http://localhost:8080.
 - GET /api/patrons/{id} - Retrieve details of a specific patron by ID.
 - PUT /api/patrons/{id} - Update an existing patron's information.
      - Required JSON Payload for updated info:
+       ```json
          {
            "name": "patron name",
            "contactInfo": "123456",
            "email": "email@example.com",
            "password": "password"
          }
+       ```
 - DELETE /api/patrons/{id} - Remove a patron from the system.
 
 #### Authentication Endpoints
 - POST /api/auth/login - Authenticate a user and return a JWT.
    - Required JSON Payload:
+     ```json
         {
           "email": "email@example.com",
           "password": "password"
         }
+     ```
 - POST /api/auth/register - Register a new patron.
     - Required JSON Payload:
+      ```json
         {
           "name": "patron name",
           "contactInfo": "123456",
           "email": "email@example.com",
           "password": "password"
         }
-
+        ```
 #### Borrowing Endpoints (authentication required)
 - POST /api/borrow/{bookId}/patron/{patronId} - Allow a patron to borrow a book.
 - PUT /api/return/{bookId}/patron/{patronId} - Allow a patron to return a book.
-       - Obtain JWT Token from Login:
-       - Extract the JWT token from the response.
-       - Add the token to the Authorization header in subsequent requests to secured endpoints:  
-       - Authorization: Bearer your_jwt_token_here
+        1) Obtain JWT Token from Login:
+        2) Extract the JWT token from the response.
+        3) Add the token to the Authorization header in subsequent requests to secured endpoints:
+            Authorization: Bearer your_jwt_token_here
    
 ### Security
 This application uses JWT (JSON Web Token) for securing the API. Endpoints related to borrowing records require a valid JWT obtained from the authentication endpoints.
