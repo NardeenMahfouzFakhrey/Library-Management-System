@@ -17,8 +17,8 @@ Before running the application, you need to configure the PostgreSQL database se
 #### - Configure JWT settings:
         app.jwtSecret=your_secret_key_here
         app.jwtExpirationMs=3600000
-
-        The application will start running at http://localhost:8080.
+        
+The application will start running at http://localhost:8080.
 
 ### API Endpoints
 #### Book Management
