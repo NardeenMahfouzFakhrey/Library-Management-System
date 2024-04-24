@@ -74,10 +74,10 @@ The application will start running at http://localhost:8080.
 #### Borrowing Endpoints (authentication required)
 - POST /api/borrow/{bookId}/patron/{patronId} - Allow a patron to borrow a book.
 - PUT /api/return/{bookId}/patron/{patronId} - Allow a patron to return a book.
-      - Obtain JWT Token from Login:
-      - Extract the JWT token from the response.
-      - Add the token to the Authorization header in subsequent requests to secured endpoints:  
-      - Authorization: Bearer your_jwt_token_here
+       - Obtain JWT Token from Login:
+       - Extract the JWT token from the response.
+       - Add the token to the Authorization header in subsequent requests to secured endpoints:  
+       - Authorization: Bearer your_jwt_token_here
    
 ### Security
 This application uses JWT (JSON Web Token) for securing the API. Endpoints related to borrowing records require a valid JWT obtained from the authentication endpoints.
