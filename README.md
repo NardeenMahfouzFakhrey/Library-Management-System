@@ -26,12 +26,14 @@ The application will start running at http://localhost:8080.
 - GET /api/books/{id} - Retrieve details of a specific book by ID.
 - POST /api/books - Add a new book to the library.
      - Required JSON Payload:
+       ```json
         {
          "title": "Example Book Title",
           "author": "Author Name",
           "publicationYear": 2021,
           "isbn": "ISBN-122"
         }
+       ```
 - PUT /api/books/{id} - Update an existing book's information.
     - Required JSON Payload for updated info:
         {
